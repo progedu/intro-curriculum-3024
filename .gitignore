@@ -1,1 +1,5 @@
 node_modules/
+.eslintignore
+.idea/
+intro-curriculum-3024.iml
+package-lock.json
