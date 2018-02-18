@@ -1,4 +1,6 @@
+//- <!DOCTYPE html>
 doctype html
+//- <html lang="jp">
 html(lang="jp")
   head
     meta(charset="UTF-8")
@@ -13,12 +15,17 @@ html(lang="jp")
       div
         button(type="submit") 投稿
     h2 投稿一覧
+    //- 全投稿内容が格納された配列postsを受け取り、
+    //- １件ずつpostに渡して処理を行っている
     each post in posts
       h3 #{post.id} : ID:#{post.trackingCookie}
       p #{post.content}
-      p 投稿日時: #{post.createdAt}
+      p 投稿日時： #{post.createdAt}
+      //- - でJavaScriptを挿入できる。userはposts-handler.jsから渡している
       - var isDeletable = (user === post.postedBy)
+      //- 削除権限がある場合
       if isDeletable
+        //- 削除用フォームを表示する。ボタンを押すとactionで指定したURLへとぶ
         form(method="post", action="/posts?delete=1")
           input(type="hidden", name="id", value="#{post.id}")
           button(type="submit") 削除
