@@ -1,0 +1,45 @@
+Arguments: 
+  /home/vagrant/.nodebrew/node/v6.11.1/bin/node /home/vagrant/.nodebrew/current/bin/yarn install
+
+PATH: 
+  /home/vagrant/.nodebrew/current/bin:/home/vagrant/bin:/home/vagrant/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin
+
+Yarn version: 
+  1.5.1
+
+Node version: 
+  6.11.1
+
+Platform: 
+  linux x64
+
+npm manifest: 
+  {
+    "name": "secret-board",
+    "version": "1.0.0",
+    "description": "秘密の匿名掲示板",
+    "main": "index.js",
+    "scripts": {
+      "test": "node test.js"
+    },
+    "author": "",
+    "license": "ISC",
+    "dependencies": {
+      "cookies": "^0.5.1",
+      "http-auth": "^2.2.8",
+      "jade": "^1.11.0",
+      "pg": "^6.1.0",
+      "pg-hstore": "^2.3.2",
+      "sequelize": "^3.25.0"
+    }
+  }
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile
+
+Trace: 
+  Error: EPROTO: protocol error, symlink '../../../acorn/bin/acorn' -> '/home/vagrant/workspace/intro-curriculum-3024/node_modules/acorn-globals/node_modules/.bin/acorn'
+      at Error (native)
