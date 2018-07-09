@@ -11,9 +11,9 @@
   "dependencies": {
     "cookies": "^0.5.1",
     "http-auth": "^3.2.3",
-    "pug": "^2.0.0-rc.4",
     "pg": "^6.1.0",
     "pg-hstore": "^2.3.2",
+    "pug": "^2.0.0-rc.4",
     "sequelize": "^3.25.0"
   }
 }
