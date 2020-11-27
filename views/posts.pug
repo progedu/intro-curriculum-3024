@@ -2,16 +2,16 @@ doctype html
 html(lang="jp")
   head
     meta(charset="UTF-8")
-    title 秘密の匿名掲示板
+    title みんなで小説を書きましょう！
   body
-    h1 秘密の匿名掲示板
+    h1 秘密の匿名掲示板　（小説書いてます）
     a(href="/logout") ログアウト
-    h2 新規投稿
+    h2 新規提案
     form(method="post" action="/posts")
       div
         textarea(name="content" cols=40 rows=4)
       div
-        button(type="submit") 投稿
+        button(type="submit") 提案！
     h2 投稿一覧
     each post in posts
       h3 #{post.id} : ID:#{post.trackingCookie}
@@ -21,5 +21,5 @@ html(lang="jp")
       if isDeletable
         form(method="post" action="/posts?delete=1")
           input(type="hidden" name="id" value=post.id)
-          button(type="submit") 削除
+          button(type="submit" onclick= 'return confirm("削除しますか？");') 削除
       hr
