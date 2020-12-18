@@ -19,7 +19,7 @@ html(lang="jp")
       p 投稿日時: #{post.createdAt}
       - var isDeletable = (user === post.postedBy)
       if isDeletable
-        form(method="post" action="/posts?delete=1")
+        form(method="post" action="/posts?delete=1" onSubmit="return confirm('よろしいですか？')")
           input(type="hidden" name="id" value=post.id)
           button(type="submit") 削除
       hr
