@@ -1,5 +1,5 @@
 doctype html
-html(lang="jp")
+html(lang="ja")
   head
     meta(charset="UTF-8")
     title 秘密の匿名掲示板
@@ -12,10 +12,11 @@ html(lang="jp")
         textarea(name="content" cols=40 rows=4)
       div
         button(type="submit") 投稿
+
     h2 投稿一覧
     each post in posts
       h3 #{post.id} : ID:#{post.trackingCookie}
-      p #{post.content}
+      p(style="white-space: pre-wrap;") #{post.content}
       p 投稿日時: #{post.createdAt}
       - var isDeletable = (user === post.postedBy)
       if isDeletable
